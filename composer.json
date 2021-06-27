@@ -1,0 +1,45 @@
+{
+  "name": "mitmelon/guardPower",
+  "description": "GuardPower is a sophisticated PHP library for protecting your application against bad bots, scrappers, anonymous access from tor browsers, strong user input validations, prevent DDOS Attacks and lots more features to come.",
+  "type": "library",
+  "keywords": [
+    "security",
+    "ddos",
+    "validations",
+    "bots",
+    "bad bots",
+    "scrapper",
+    "tor",
+    "anonymous",
+    "spam",
+    "protect",
+    "php",
+    "browser",
+    "sanitize",
+    "clean",
+    "protect",
+    "attack",
+    "tor browser",
+    "guard"
+],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Manomite",
+      "email": "opensource@manomite.net"
+    }
+  ],
+  "minimum-stability": "beta",
+  "require": {
+    "php": ">=5.6",
+    "matomo/device-detector": "^4.2.3",
+    "beberlei/assert": "^3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "GuardPower\\": [
+        "src/"
+      ]
+    }
+  }
+}
