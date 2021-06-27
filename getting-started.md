@@ -21,11 +21,6 @@ require_once __DIR__."/vendor/autoload.php";
 $guardPower = new GuardPower();
 $guardPower->init();
 //Your Application Code Here
-
-//If global filter is on just accept your post or get request without filtering
-$email = $_POST['email'] // This is save because it has been filtered.
-
-//Do other things.
 ```
 
 ### Properties Setup:
@@ -53,9 +48,6 @@ $guardPower->block_request = false;
 //This could be used to prevent DDOS Attacks
 //Default is 100 times per minutes
 $guardPower->attempt = 100;
-//Switch off global filter
-//We dont recommend switching it off
-$guardPower->globalFillter = false;
 ```
 
 ### Other Methods:
