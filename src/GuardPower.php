@@ -12,10 +12,8 @@ namespace GuardTor;
 */
 use GuardTor\Limiter\Rate;
 use GuardTor\Limiter\RedisRateLimiter;
-use \DeviceDetector\{
-    DeviceDetector as DC,
-    Parser\Device\AbstractDeviceParser as DV
-};
+use \DeviceDetector\DeviceDetector as DC;
+use \DeviceDetector\Parser\Device\AbstractDeviceParser as DV;
 
 class GuardPower
 {
@@ -57,7 +55,6 @@ class GuardPower
     public function __construct()
     {
         $this->projectDir = getcwd();
-        
     }
 
     /**
@@ -83,7 +80,7 @@ class GuardPower
                 $this->redirect($this->blockLink);
             }
         }
-        if($globalFilter){
+        if ($globalFilter) {
             $this->globalFilter();
         }
     }
@@ -91,22 +88,22 @@ class GuardPower
      * Global filter for filtering POST and GET request
      * @return void
      */
-    private function globalFilter(){
+    private function globalFilter()
+    {
         $methods = (string) $_SERVER['REQUEST_METHOD'];
         $vars_dl = [];
-        if( in_array( $methods, ['POST', 'GET'] ) ) {
-            switch( $methods ) {
+        if (in_array($methods, ['POST', 'GET'])) {
+            switch ($methods) {
                 case 'POST':
-                    $post_vars = filter_input_array( INPUT_POST, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY ) ?? [];
+                    $post_vars = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY) ?? [];
                     $_POST = $post_vars;
                     break;
                 case 'GET':
-                    $get_vars = filter_input_array( INPUT_GET, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY ) ?? [];
-                    $_GET = $get_vars; 
+                    $get_vars = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY) ?? [];
+                    $_GET = $get_vars;
                     break;
             }
-        }
-        else {
+        } else {
             die('<h1>ACCESS Exception :: method '. $methods .' blocked!</h1>');
         }
     }
