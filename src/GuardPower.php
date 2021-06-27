@@ -1,5 +1,5 @@
 <?php
-namespace GuardTor;
+namespace GuardPower;
 
 /*
 
