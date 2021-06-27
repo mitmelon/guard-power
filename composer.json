@@ -1,5 +1,5 @@
 {
-  "name": "mitmelon/guard-Power",
+  "name": "mitmelon/guard-power",
   "description": "GuardPower is a sophisticated PHP library for protecting your application against bad bots, scrappers, anonymous access from tor browsers, strong user input validations, prevent DDOS Attacks and lots more features to come.",
   "type": "library",
   "keywords": [
