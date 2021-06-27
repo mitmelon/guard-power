@@ -47,6 +47,8 @@ class GuardPower
     public $block_request = true;
     //Requested limit per minute before blocking
     public $attempt = 100;
+    //Global filter (default true)
+    public $globalFilter = true;
 
     /**
      * Init
@@ -55,6 +57,7 @@ class GuardPower
     public function __construct()
     {
         $this->projectDir = getcwd();
+        
     }
 
     /**
@@ -79,6 +82,32 @@ class GuardPower
             if ($request === true) {
                 $this->redirect($this->blockLink);
             }
+        }
+        if($globalFilter){
+            $this->globalFilter();
+        }
+    }
+    /**
+     * Global filter for filtering POST and GET request
+     * @return void
+     */
+    private function globalFilter(){
+        $methods = (string) $_SERVER['REQUEST_METHOD'];
+        $vars_dl = [];
+        if( in_array( $methods, ['POST', 'GET'] ) ) {
+            switch( $methods ) {
+                case 'POST':
+                    $post_vars = filter_input_array( INPUT_POST, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY ) ?? [];
+                    $_POST = $post_vars;
+                    break;
+                case 'GET':
+                    $get_vars = filter_input_array( INPUT_GET, FILTER_SANITIZE_STRING | FILTER_SANITIZE_FULL_SPECIAL_CHARS | FILTER_SANITIZE_ENCODED, FILTER_REQUIRE_ARRAY ) ?? [];
+                    $_GET = $get_vars; 
+                    break;
+            }
+        }
+        else {
+            die('<h1>ACCESS Exception :: method '. $methods .' blocked!</h1>');
         }
     }
     /**
