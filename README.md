@@ -28,3 +28,5 @@ Date - 04/06/2021
 * Fixed some bugs (used die(); instead of throw) on all exception throws.
 ***********************************************
 ```
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power?ref=badge_large)
