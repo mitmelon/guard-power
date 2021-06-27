@@ -12,8 +12,10 @@ namespace GuardTor;
 */
 use GuardTor\Limiter\Rate;
 use GuardTor\Limiter\RedisRateLimiter;
-use DeviceDetector\DeviceDetector;
-use DeviceDetector\Parser\Device\DeviceParserAbstract;
+use \DeviceDetector\{
+    DeviceDetector as DC,
+    Parser\Device\AbstractDeviceParser as DV
+};
 
 class GuardPower
 {
@@ -257,9 +259,9 @@ class GuardPower
     public function getDeviceInfo():array
     {
         $ip = $this->get_ip();
-        DeviceParserAbstract::setVersionTruncation(DeviceParserAbstract::VERSION_TRUNCATION_NONE);
+        DV::setVersionTruncation(DV::VERSION_TRUNCATION_NONE);
         $userAgent = $this->strip($_SERVER['HTTP_USER_AGENT']);
-        $dd = new DeviceDetector($userAgent);
+        $dd = new DC($userAgent);
         $dd->parse();
         $browsers = $dd->getClient();
         $browser = $browsers['name'].'/'.$browsers['version'];
