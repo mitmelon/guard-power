@@ -3,7 +3,7 @@ description: GuardPower Complete Documentation
 ---
 
 # Introduction
-[![Build Status](https://travis-ci.com/mitmelon/guard-power.svg?branch=main)](https://travis-ci.com/mitmelon/guard-power) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power?ref=badge_shield)
+[![Build Status](https://travis-ci.com/mitmelon/guard-power.svg?branch=main)](https://travis-ci.com/mitmelon/guard-power) ![Packagist Downloads](https://img.shields.io/packagist/dm/mitmelon/guard-power) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmitmelon%2Fguard-power?ref=badge_shield)
 
 
 GuardPower is a sophisticated PHP library for protecting your application against bad bots, scrappers, anonymous access from tor browsers, strong user input validations, prevent DDOS Attacks and lots more features to come.
