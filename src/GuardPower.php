@@ -6,7 +6,7 @@ namespace GuardTor;
     Title:        GuardPower
     Description:  GuardPower is a sophisticated PHP library for protecting your application against bad bots, scrappers, anonymous access from tor browsers, strong user input validations, prevent DDOS Attacks.
     Author:       Manomite LLC ( @manomite )
-    Version:      1.0.0 / 2021
+    Version:      1.0.1 / 2021
     License:      MIT
 
 */
