@@ -4,6 +4,8 @@ description: GuardPower Complete Documentation
 
 # Introduction
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmitmelon%2Fguardtor.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmitmelon%2Fguardtor?ref=badge_shield)
+
 GuardPower is a sophisticated PHP library for protecting your application against bad bots, scrappers, anonymous access from tor browsers, strong user input validations, prevent DDOS Attacks and lots more features to come.
 
 Prevent your shinny works from web scrappers and DDOS attacks by limiting and blocking malicious requests and anonymous users.
@@ -30,3 +32,6 @@ Date - 04/06/2021
 ```
 
 ## License
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmitmelon%2Fguardtor.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmitmelon%2Fguardtor?ref=badge_large)
+
