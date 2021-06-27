@@ -80,7 +80,7 @@ class GuardPower
                 $this->redirect($this->blockLink);
             }
         }
-        if ($globalFilter) {
+        if ($this->globalFilter) {
             $this->globalFilter();
         }
     }
