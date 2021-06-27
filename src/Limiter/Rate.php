@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace GuardTor\Limiter;
+namespace GuardPower\Limiter;
 use \Assert\Assertion;
 
 class Rate

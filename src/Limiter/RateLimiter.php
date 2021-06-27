@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace GuardTor\Limiter;
+namespace GuardPower\Limiter;
 use RateLimit\Exception\LimitExceeded;
 interface RateLimiter
 {

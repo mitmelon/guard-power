@@ -1,5 +1,5 @@
 <?php
-namespace GuardTor;
+namespace GuardPower;
 
 //Fingerprint class to generate fingerprint keys from data
  
