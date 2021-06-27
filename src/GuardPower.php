@@ -10,8 +10,8 @@ namespace GuardPower;
     License:      MIT
 
 */
-use GuardTor\Limiter\Rate;
-use GuardTor\Limiter\RedisRateLimiter;
+use GuardPower\Limiter\Rate;
+use GuardPower\Limiter\RedisRateLimiter;
 use \DeviceDetector\DeviceDetector as DC;
 use \DeviceDetector\Parser\Device\AbstractDeviceParser as DV;
 
@@ -58,7 +58,7 @@ class GuardPower
     }
 
     /**
-     * Initialize GuardTor
+     * Initialize GuardPower
      * @return void
      */
     public function init():void
@@ -912,7 +912,7 @@ class GuardPower
     private function htaccessConfig():string
     {
         return '
-        #GuardTor Configurations (--DO NOT TOUCH HERE--)
+        #GuardPower Configurations (--DO NOT TOUCH HERE--)
         RewriteEngine on
         Options All -Indexes
         <FilesMatch "\.(htaccess|htpasswd|ini|psd|log|sh|xml|cgi|ini|lock)$">
